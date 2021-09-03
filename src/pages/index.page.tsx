@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import {NextPage} from 'next';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTwitter} from '@fortawesome/free-brands-svg-icons';
 
 import {Personality} from './personality';
 import {Slot} from './Slot';
@@ -12,8 +14,22 @@ export type PageProps = Record<string, never>;
 
 export const Page: NextPage<PageProps> = ({...props}) => {
   const [personality, setPersonality] = useState<Personality | null>(null);
-
   const {LL} = useTranslation();
+
+  const tweetUrl = useMemo(() => {
+    if (personality) {
+      const url = new URL('https://16-personalities.vercel.app/');
+      url.searchParams.set('type', personality);
+
+      const tweetUrl = new URL('http://twitter.com/share');
+      tweetUrl.searchParams.set(
+        'text',
+        LL.tweetText({type: personality, job: LL.job[personality]()}),
+      );
+      tweetUrl.searchParams.set('url', url.toString());
+      return tweetUrl.toString();
+    } else return null;
+  }, [LL, personality]);
 
   return (
     <main
@@ -59,6 +75,23 @@ export const Page: NextPage<PageProps> = ({...props}) => {
             })}
           </a>
         </>
+      )}
+      {tweetUrl && (
+        <a
+          className={clsx(
+            'rounded-sm',
+            'mt-8',
+            ['bg-twitter-1', 'text-white'],
+            ['font-bold'],
+            ['px-4', 'py-2'],
+          )}
+          target="_blank"
+          href={tweetUrl}
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon fixedWidth icon={faTwitter} />
+          <span className={clsx('ml-2')}>{LL.tweetLinkText()}</span>
+        </a>
       )}
     </main>
   );

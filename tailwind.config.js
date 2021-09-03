@@ -1,5 +1,3 @@
-const tailwindColors = require('tailwindcss/colors');
-
 /** @type {import('@types/tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   mode: 'jit',
@@ -9,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: tailwindColors.blueGray,
+        twitter: {
+          1: '#1da1f2',
+        },
       },
     },
     zIndex: {
