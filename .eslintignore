@@ -1,0 +1,8 @@
+# output
+dist/
+.next/
+
+# generated
+next-env.d.ts
+
+src/i18n/i18n-*

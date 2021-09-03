@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+
+# dependencies
+node_modules/
+package-lock.json
+
+# env
+.env
+.env.local
+
+.envrc
+
+# log
+*.log
+
+# output
+dist/
+.next/
+
+# generated
+src/i18n/i18n-*
+
+.eslintcache
+

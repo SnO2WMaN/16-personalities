@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:@shopify/typescript",
+    "plugin:@shopify/react",
+    "plugin:@next/next/recommended",
+    "plugin:@shopify/prettier"
+  ],
+  "plugins": ["unused-imports"],
+  "rules": {
+    "unused-imports/no-unused-imports": [2],
+    "jsx-a11y/anchor-is-valid": [
+      2,
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": [2, "type"],
+    "@typescript-eslint/consistent-indexed-object-style": [2, "record"]
+  },
+  "overrides": [
+    {
+      "files": ["*.config.js"],
+      "extends": ["plugin:@shopify/node"]
+    }
+  ]
+}
