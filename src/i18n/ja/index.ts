@@ -28,6 +28,12 @@ const ja: BaseTranslation = {
   },
   typeText: '{type:string}（{job:string}）型の人間の詳細',
   typeLink: `https://www.16personalities.com/ja/{type:string}型の性格`,
+  tweetLinkText: 'ツイートする！',
+  tweetText: '{type:string}（{job:string}）型の人間でした！',
+  slot: {
+    stop: 'STOP',
+    start: 'START',
+  },
 };
 
 export default ja;

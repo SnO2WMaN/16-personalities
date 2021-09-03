@@ -1,8 +1,10 @@
 import clsx from 'clsx';
-import React, {useState, useMemo, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled, {keyframes} from 'styled-components';
 
 import {Char1, Char2, Char3, Char4, Personality} from './personality';
+
+import {useTranslation} from '~/i18n/useTranslation';
 
 export const ReelItem: React.FC = ({children}) => (
   <div
@@ -84,18 +86,23 @@ export const View = styled.div`
   }
 `;
 
-export const Button: React.VFC<{className?: string; onClick(): void}> = ({
-  className,
-  onClick,
-}) => (
-  <button
-    type="button"
-    className={clsx(className, 'w-[64px]')}
-    onClick={onClick}
-  >
-    STOP
-  </button>
-);
+export const Button: React.VFC<{
+  className?: string;
+  rolling: boolean;
+  onClick(): void;
+}> = ({className, rolling, onClick}) => {
+  const {LL} = useTranslation();
+  return (
+    <button
+      type="button"
+      className={clsx(className, 'w-[64px]')}
+      onClick={onClick}
+    >
+      {rolling && LL.slot.stop()}
+      {!rolling && LL.slot.start()}
+    </button>
+  );
+};
 
 export const Slot: React.VFC<{
   className?: string;
@@ -106,19 +113,14 @@ export const Slot: React.VFC<{
   const [char3, setChar3] = useState<Char3 | null>(null);
   const [char4, setChar4] = useState<Char4 | null>(null);
 
-  const type = useMemo<Personality | null>(
+  useEffect(
     () =>
-      char1 && char2 && char3 && char4
-        ? `${char1}${char2}${char3}${char4}`
-        : null,
-    [char1, char2, char3, char4],
-  );
-  useEffect(() =>
-    setPersonality(
-      char1 && char2 && char3 && char4
-        ? `${char1}${char2}${char3}${char4}`
-        : null,
-    ),
+      setPersonality(
+        char1 && char2 && char3 && char4
+          ? `${char1}${char2}${char3}${char4}`
+          : null,
+      ),
+    [char1, char2, char3, char4, setPersonality],
   );
 
   return (
@@ -139,24 +141,28 @@ export const Slot: React.VFC<{
       </div>
       <div className={clsx('mt-2', 'flex')}>
         <Button
+          rolling={!char1}
           onClick={() =>
             // eslint-disable-next-line no-nested-ternary
             setChar1((char) => (char ? null : Math.random() < 0.5 ? 'I' : 'E'))
           }
         />
         <Button
+          rolling={!char2}
           onClick={() =>
             // eslint-disable-next-line no-nested-ternary
             setChar2((char) => (char ? null : Math.random() < 0.5 ? 'N' : 'S'))
           }
         />
         <Button
+          rolling={!char3}
           onClick={() =>
             // eslint-disable-next-line no-nested-ternary
             setChar3((char) => (char ? null : Math.random() < 0.5 ? 'F' : 'T'))
           }
         />
         <Button
+          rolling={!char4}
           onClick={() =>
             // eslint-disable-next-line no-nested-ternary
             setChar4((char) => (char ? null : Math.random() < 0.5 ? 'J' : 'P'))
