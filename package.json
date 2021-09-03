@@ -7,6 +7,7 @@
     "build": "run-s -cln i18ngen build:next",
     "build:next": "next build",
     "i18ngen": "typesafe-i18n --no-watch",
+    "typecheck": "tsc --noEmit",
     "lint": "run-s -cln lint:*",
     "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
     "lint:prettier": "prettier --check **/*.{css,json}",
