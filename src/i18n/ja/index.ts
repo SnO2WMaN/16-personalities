@@ -1,7 +1,11 @@
 import type {BaseTranslation} from 'typesafe-i18n';
 
 const ja: BaseTranslation = {
-  title: '16 Personalities',
+  head: {
+    title: '16 Personalities | 性格診断',
+    description: '非常に正確で、「ちょっぴりゾッとする」と言われています。',
+  },
+  title: '16 Personalities | 性格診断',
   listTextJa: '日本語版：性格タイプ一覧',
   result: 'あなたは{type:string}（{job:string}）型の人間です',
   job: {
