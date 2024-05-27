@@ -15,6 +15,9 @@
     "fmt:eslint": "yarn lint:eslint --fix",
     "fmt:prettier": "yarn lint:prettier --write"
   },
+  "engines": {
+    "node": "16.4.2"
+  },
   "dependencies": {
     "clsx": "^1.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
