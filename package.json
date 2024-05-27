@@ -16,7 +16,7 @@
     "fmt:prettier": "yarn lint:prettier --write"
   },
   "engines": {
-    "node": "16.20.2"
+    "node": "18.20.3"
   },
   "dependencies": {
     "clsx": "^1.1.1",
