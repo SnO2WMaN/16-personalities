@@ -3,5 +3,5 @@
     "EditorConfig.EditorConfig",
     "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss"
-  ],
+  ]
 }
