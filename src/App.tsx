@@ -171,7 +171,7 @@ export default function App() {
 
   const tweetUrl = useMemo(() => {
     if (personality) {
-      const appUrl = new URL("https://16-personalities.vercel.app/");
+      const appUrl = new URL("https://16-personalities.sno2wman.net/");
       appUrl.searchParams.set("type", personality);
 
       const tweetUrl = new URL("http://twitter.com/share");
