@@ -7,37 +7,28 @@ on:
   pull_request:
 
 jobs:
-  eslint:
-    name: ESLint
+  lint:
+    name: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: yarn
-      - uses: bahmutov/npm-install@v1
-      - run: yarn run lint:eslint
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm lint
 
-  prettier:
-    name: Prettier
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - uses: bahmutov/npm-install@v1
-      - run: yarn run lint:prettier
-
-  typecheck:
-    name: TypeCheck
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-      - uses: bahmutov/npm-install@v1
-      - run: yarn run i18ngen
-      - run: yarn run typecheck
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run typecheck
