@@ -30,7 +30,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.15.0
-    version: 2.21.3(@eslint-react/eslint-plugin@1.5.28)(@vue/compiler-sfc@3.4.38)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.9)(eslint@8.57.0)(typescript@5.5.4)
+    version: 2.21.3(@eslint-react/eslint-plugin@1.5.28)(@vue/compiler-sfc@3.4.38)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.11)(eslint@8.57.0)(typescript@5.5.4)
   '@eslint-react/eslint-plugin':
     specifier: ^1.5.12
     version: 1.5.28(eslint@8.57.0)(typescript@5.5.4)
@@ -60,7 +60,7 @@ devDependencies:
     version: 4.6.2(eslint@8.57.0)
   eslint-plugin-react-refresh:
     specifier: ^0.4.6
-    version: 0.4.9(eslint@8.57.0)
+    version: 0.4.11(eslint@8.57.0)
   eslint-plugin-tailwindcss:
     specifier: ^3.15.1
     version: 3.17.4(tailwindcss@3.4.10)
@@ -85,7 +85,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@antfu/eslint-config@2.21.3(@eslint-react/eslint-plugin@1.5.28)(@vue/compiler-sfc@3.4.38)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.9)(eslint@8.57.0)(typescript@5.5.4):
+  /@antfu/eslint-config@2.21.3(@eslint-react/eslint-plugin@1.5.28)(@vue/compiler-sfc@3.4.38)(eslint-plugin-format@0.1.2)(eslint-plugin-react-hooks@4.6.2)(eslint-plugin-react-refresh@0.4.11)(eslint@8.57.0)(typescript@5.5.4):
     resolution: {integrity: sha512-nY2pYSJGo5utj8LSMHIkJVMv04PTX9Cpu78ciCgkO5R5DOHyilvXXAEe+iwXkvaaRTmtDqhnhbIPFxKCiaqFNA==}
     hasBin: true
     peerDependencies:
@@ -153,7 +153,7 @@ packages:
       eslint-plugin-no-only-tests: 3.1.0
       eslint-plugin-perfectionist: 2.11.0(eslint@8.57.0)(typescript@5.5.4)(vue-eslint-parser@9.4.3)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
-      eslint-plugin-react-refresh: 0.4.9(eslint@8.57.0)
+      eslint-plugin-react-refresh: 0.4.11(eslint@8.57.0)
       eslint-plugin-regexp: 2.6.0(eslint@8.57.0)
       eslint-plugin-toml: 0.11.1(eslint@8.57.0)
       eslint-plugin-unicorn: 54.0.0(eslint@8.57.0)
@@ -2483,8 +2483,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-react-refresh@0.4.9(eslint@8.57.0):
-    resolution: {integrity: sha512-QK49YrBAo5CLNLseZ7sZgvgTy21E6NEw22eZqc4teZfH8pxV3yXc9XXOYfUI6JNpw7mfHNkAeWtBxrTyykB6HA==}
+  /eslint-plugin-react-refresh@0.4.11(eslint@8.57.0):
+    resolution: {integrity: sha512-wrAKxMbVr8qhXTtIKfXqAn5SAtRZt0aXxe5P23Fh4pUAdC6XEsybGLB8P0PI4j1yYqOgUEUlzKAGDfo7rJOjcw==}
     peerDependencies:
       eslint: '>=7'
     dependencies:
