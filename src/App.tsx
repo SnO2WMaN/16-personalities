@@ -94,8 +94,8 @@ export const Button: React.FC<{
 			className={clsx(className, "w-[64px]")}
 			onClick={onClick}
 		>
-			{rolling && <>STOP</>}
-			{!rolling && <>START</>}
+			{rolling && "STOP"}
+			{!rolling && "START"}
 		</button>
 	);
 };
@@ -144,10 +144,10 @@ export function Slot({
           }`,
 					)}
 				>
-					<Reel chars={["I", "E"]} char={char1}></Reel>
-					<Reel chars={["N", "S"]} char={char2}></Reel>
-					<Reel chars={["T", "F"]} char={char3}></Reel>
-					<Reel chars={["P", "J"]} char={char4}></Reel>
+					<Reel chars={["I", "E"]} char={char1} />
+					<Reel chars={["N", "S"]} char={char2} />
+					<Reel chars={["T", "F"]} char={char3} />
+					<Reel chars={["P", "J"]} char={char4} />
 				</div>
 			</div>
 			<div className={clsx("mt-2 flex")}>
@@ -202,9 +202,8 @@ export default function App() {
 			);
 			tweetUrl.searchParams.set("url", appUrl.toString());
 			return tweetUrl.toString();
-		} else {
-			return null;
 		}
+		return null;
 	}, [personality]);
 
 	return (
@@ -215,7 +214,7 @@ export default function App() {
 				</h1>
 				<p className="text-center text-slate-700 text-sm mt-4">
 					「ついに明らかになるなんて本当に信じられません」
-					<br></br>
+					<br />
 					たった10分で、自分がどんな人間で、なぜそのような行動を取るのか、「不思議なくらい正確」な説明が手に入ります。
 				</p>
 				<p className="text-center text-sm mt-2">
@@ -232,7 +231,7 @@ export default function App() {
 				<Slot
 					className={clsx("my-8")}
 					setPersonality={(p) => setPersonality(p)}
-				></Slot>
+				/>
 
 				{personality && (
 					<p className="text-lg text-slate-900">
