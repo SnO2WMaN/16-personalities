@@ -1,7 +1,11 @@
 {
-  "recommendations": [
-    "EditorConfig.EditorConfig",
-    "dbaeumer.vscode-eslint",
-    "bradlc.vscode-tailwindcss"
-  ]
+	"recommendations": [
+		"EditorConfig.EditorConfig",
+		"bradlc.vscode-tailwindcss",
+		"biomejs.biome"
+	],
+	"unwantedRecommendations": [
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint"
+	]
 }
