@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  min-height: 100svh;
+	min-height: 100svh;
 }
