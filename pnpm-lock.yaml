@@ -44,7 +44,7 @@ importers:
         version: 4.3.4(vite@5.4.11)
       typescript:
         specifier: ^5.2.2
-        version: 5.6.3
+        version: 5.7.2
       vite:
         specifier: ^5.2.0
         version: 5.4.11
@@ -1054,8 +1054,8 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2072,7 +2072,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  typescript@5.6.3: {}
+  typescript@5.7.2: {}
 
   update-browserslist-db@1.1.1(browserslist@4.24.2):
     dependencies:
