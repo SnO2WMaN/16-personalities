@@ -6,8 +6,16 @@
 		":automergeMinor",
 		"schedule:monthly"
 	],
+	"timezone": "Asia/Tokyo",
+	"rebaseWhen": "conflicted",
 	"lockFileMaintenance": {
 		"enabled": true,
 		"schedule": ["before 3am on the first day of the month"]
-	}
+	},
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+			"groupName": "all non-major dependencies"
+		}
+	]
 }
