@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+	--color-twitter-1: #1da1f2;
+}
 
 body {
 	min-height: 100svh;

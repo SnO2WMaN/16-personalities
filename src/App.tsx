@@ -91,7 +91,7 @@ export const Button: React.FC<{
 	return (
 		<button
 			type="button"
-			className={clsx(className, "w-[64px]")}
+			className={clsx(className, "w-[64px] cursor-pointer")}
 			onClick={onClick}
 		>
 			{rolling && "STOP"}
@@ -251,7 +251,7 @@ export default function App() {
 				{tweetUrl && (
 					<a
 						className={clsx(
-							"block rounded-sm mt-4 bg-twitter-1 text-white font-bold px-4 py-2 text-lg",
+							"block rounded-xs mt-4 bg-twitter-1 text-white font-bold px-4 py-2 text-lg",
 						)}
 						target="_blank"
 						href={tweetUrl}
